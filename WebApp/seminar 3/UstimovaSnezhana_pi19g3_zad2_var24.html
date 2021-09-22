@@ -1,0 +1,45 @@
+<script>
+var my_list = new Array("Работа","Устимовой","Снежаны,","группа","ПИ19-3")
+function loadMy_list(){ //заполнение текстом textarea
+	$("#txtarea3").remove();
+	var h = $("#txtarea1").val()
+	var w = $("#txtarea2").val()
+	var txtarea3 = $("<textarea id = 'txtarea3' ></textarea>")
+	txtarea3.appendTo("body");
+	document.getElementById('txtarea3').style.width = w + "px";
+	document.getElementById('txtarea3').style.height = h + "px";
+	var s = my_list.join(" ")
+	document.getElementById('txtarea3').value = s
+}
+</script>
+<script src='jquery.js'></script>
+<body>
+<p>Работа студентки группы ПИ19-3, Устимовой Снежаны, вариант №24 </p>
+<p>(а)  кнопка и элемент TEXTAREA </p>
+<p>(б) Задаются размеры TEXTAREA </p>
+<p>(в) По кнопке  TEXTAREA заполняется текстом, пословно заданным в массиве </p>
+<br>
+<form name="frm" >
+<input id="txtarea1" type="number" style="{weight: 300px; height: 150px;}" placeholder="Длина" />
+<input id="txtarea2" type="number" style="{weight: 300px; height: 150px;}" placeholder="Ширина" />
+<button id="create" type="button" onclick="loadMy_list()">Создать</button>
+<style>
+	body {
+			background: url("https://catherineasquithgallery.com/uploads/posts/2021-02/1612760981_93-p-goluboi-fon-more-133.jpg");
+			margin: 50px;
+		}
+	button {
+		background-color: #e0dbff;
+		font-color: black;
+	}
+	p {
+		color: white;
+		font-size: 20px;
+		font-size: 20px;
+		text-shadow: 2px 0 2px #000, 
+						0 2px 2px #000, 
+						-2px 0 2px #000, 
+						0 -2px 2px #000;
+		}	
+</style>
+</body>
